@@ -11,7 +11,8 @@ class Cl extends Regex {
         1 => '/RFC\-[0-9]+\)\s*(.*?)Contacto Administrativo/ims',
         2 => '/Administrative Contact\):(.*?)Contacto /ims',
         3 => '/Technical Contact\):(.*?)Servidores/ims',
-        4 => '/Domain Servers\):(.*?)More information/ims',
+        4 => '/Domain Servers\):(.*?)(Expiration date|More information)/ims',
+        5 => '/Expiration date\):(.*?)\n/i',
     );
 
     protected $blockItems = array(
@@ -30,7 +31,10 @@ class Cl extends Regex {
             '/Organizaci.n\s*:\s*(.*?)$/im' => 'contacts:tech:organization',
         ),
         4 => array(
-            '/Domain Servers\):\s*(.*?)\s+M.+s informaci/ims' => 'nameserver',
+            '/Domain Servers\):\s*(.*?)\s+\n\n/ims' => 'nameserver',
+        ),
+        5 => array(
+            '/Expiration date\):\s*(.*?)\n/i' => 'expires'
         ),
     );
 
