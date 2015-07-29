@@ -16,7 +16,7 @@ class Standard extends KeyValue
         'name' => '/^Domain Name$/i',
         'ask_whois' => '/^(Registrar )?Whois Server$/i',
         'created' => '/^(Domain |Record )?(Creat|Registrat|Register)(e|ed|ion)( On| Date)?$/i',
-        'expires' => '/^(Domain )?(Registration |Registry )?(Expiration|Expires|Expiry) (On|Date)$/i',
+        'expires' => '/^(Domain |Registrar )?(Registration |Registry )?(Expiration|Expires|Expiry) (On|Date)$/i',
         'changed' => '/^(Domain )?(Last )?Updated (On|Date)$/i',
         'nameserver' => '/^(Name Server|Name Server Name|Nameservers)$/i',
         'dnssec' => '/^DNSSEC/i',
