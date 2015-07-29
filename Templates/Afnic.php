@@ -57,7 +57,8 @@ class Afnic extends Regex
 	 */
     protected $blockItems = array(
             1 => array('/^registrar:(?>[\x20\t]*)(.+)$/im' => 'registrar:name', 
-                    '/^created:(?>[\x20\t]*)(.+)$/im' => 'created', 
+                    '/^created:(?>[\x20\t]*)(.+)$/im' => 'created',
+                    '/^Expiry Date:(?>[\x20\t]*)(.+)$/im' => 'expires',
                     '/^last-update:(?>[\x20\t]*)(.+)$/im' => 'changed', 
                     '/^status:(?>[\x20\t]*)(.+)$/im' => 'status', 
                     '/^hold:(?>[\x20\t]*)(.+)$/im' => 'hold', 
